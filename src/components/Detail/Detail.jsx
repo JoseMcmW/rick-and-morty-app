@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Detail = () => {
+    const url = 'https://rickandmortyapi.com/api';
+    const key = 'b3607287c501.75998f2c466278552b4e';
     const { id } = useParams();
     const [character, setCharacter] = useState({});
 
     useEffect(() => {
-        axios(`https://rickandmortyapi.com/api/character/${id}`).then(
+        axios(`${url}/character/${id}?key=${key}`).then(
         ({ data }) => {
         if (data.name) {
             setCharacter(data);
