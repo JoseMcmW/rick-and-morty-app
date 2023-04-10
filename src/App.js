@@ -1,4 +1,4 @@
-import './App.css';
+import style from "./App.module.css";
 import Cards from '../src/components/Cards/Cards.jsx';
 import Nav from '../src/components/Nav/Nav.jsx';
 import About from './components/About/About';
@@ -49,7 +49,7 @@ function App() {
    };
 
    return (
-      <div className='App'>
+      <div className={style.Container}>
          {
          location.pathname !== "/" ? <Nav onSearch={onSearch}/> : null
          }
