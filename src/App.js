@@ -9,11 +9,13 @@ import axios from 'axios';
 import { Routes, Route, useLocation } from "react-router-dom";
 
 function App() {
+   const url = 'https://rickandmortyapi.com/api';
+   const key = 'b3607287c501.75998f2c466278552b4e';
    const [characters, setCharacters] = useState([]);
    const location = useLocation()
 
    function onSearch(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`)
+      axios(`${url}/character/${id}?key=${key}`)
       .then(({ data }) => {
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
