@@ -1,0 +1,14 @@
+.container input{
+    height: 2.5em;
+    border-radius: 15px;
+    margin-right: 2em;
+}
+
+.container button {
+    height: 2rem;
+    border-radius: 10px;
+    background-color: #F28322;
+    color: #F2DD72;
+    cursor: pointer;
+    font-weight:bold;
+}
