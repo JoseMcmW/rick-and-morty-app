@@ -1,0 +1,21 @@
+.container {
+    padding: 0.5em;
+    background-color: #8DBF41;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.6s;
+}
+
+img {
+    width: 10em;
+}
+
+.menu {
+    width: 6em;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+.menu:hover {
+    filter: drop-shadow(0 2px 5px red);
+}
