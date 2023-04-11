@@ -51,7 +51,7 @@ function App() {
    return (
       <div className={style.Container}>
          {
-         location.pathname !== "/" ? <Nav onSearch={onSearch}/> : null
+         location.pathname !== "/" ? <Nav onSearch={onSearch} setAccess={setAccess}/> : null
          }
 
          <Routes>
