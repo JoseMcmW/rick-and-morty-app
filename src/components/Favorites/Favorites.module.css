@@ -1,3 +1,13 @@
+.favorites {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.imgFavorites {
+    align-self: center;
+    margin-bottom: 1em;
+    width: 250px;
+}
 .container {
     width: fit-content;
     height:fit-content;
@@ -30,18 +40,6 @@
 
 .closeButton:hover {
     font-size: 1.2em;
-}
-
-.heartButton {
-    position: absolute;
-    margin-top: .1em;
-    background: transparent;
-    border: none;
-    font-size: 1.8em;
-}
-
-.heartButton:hover {
-    font-size: 2em;
 }
 
 .name {
