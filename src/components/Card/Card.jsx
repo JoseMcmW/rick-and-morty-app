@@ -1,11 +1,44 @@
 import { NavLink } from "react-router-dom";
-import styles from "./Card.module.css"
+import styles from "./Card.module.css";
+import { useDispatch, useSelector } from "react-redux"; //usamos useDispatch por el mapDispatchToProps
+import { useState, useEffect } from "react";
+import { addFavorite, deleteFavorite } from "../../redux/actions";
 
-export default function Card({ id, name, status, species, gender, origin, image, onClose }) {
+function Card({ id, name, status, species, gender, origin, image, onClose }) {
+   const dispatch = useDispatch();
+   const myFavorites = useSelector(state => state.myFavorites);
+   const [isFav, setIsFav] = useState(false);
+
+   const handleFavorite = () => {
+      if(isFav) {
+         setIsFav(false);
+         dispatch(deleteFavorite(id))
+      }
+      else {
+         setIsFav(true);
+         dispatch(addFavorite({ id, name, status, species, gender, origin, image, onClose }))
+      }
+   };
+
+   useEffect(() => {
+      myFavorites.forEach((fav) => {
+         if (fav.id === id) {
+            setIsFav(true);
+         }
+      });
+   }, [myFavorites]);
 
    return (
       <div className={styles.container}>
-         <button onClick={() => onClose(id)}>X</button>
+         {
+            isFav ? (
+               <button onClick={handleFavorite} className={styles.heartButton}>❤️</button>
+            ) : (
+               <button onClick={handleFavorite} className={styles.heartButton}>🤍</button>
+            )
+         }
+
+         <button className={styles.closeButton} onClick={() => onClose(id)}>X</button>
          <img src={image} alt='' />
 
          <NavLink to={`/detail/${id}`} className={styles.name}>
@@ -17,3 +50,5 @@ export default function Card({ id, name, status, species, gender, origin, image,
       </div>
    );
 };
+
+export default Card;

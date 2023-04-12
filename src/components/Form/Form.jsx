@@ -36,7 +36,7 @@ const Form = ({login}) => {
                 }
 
                 <label htmlFor="password">Password:</label>
-                <input name="password" type="text" placeholder="Ingrese una password" value={userData.password} onChange={handleChange}/>
+                <input name="password" type="password" placeholder="Ingrese una password" value={userData.password} onChange={handleChange}/>
                 {
                 errors.password && <span>{errors.password}</span>
                 }
