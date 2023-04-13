@@ -1,6 +1,6 @@
 .container {
     padding: 0.5em;
-    background-color: #8DBF41;
+    background-color: #F2A71B;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -12,10 +12,13 @@ img {
 }
 
 .menu {
-    width: 6em;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
 }
 
 .menu:hover {
-    filter: drop-shadow(0 2px 5px red);
+    filter: drop-shadow(0 2px 5px #F2E85C);
 }

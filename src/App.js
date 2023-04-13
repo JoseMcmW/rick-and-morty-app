@@ -13,7 +13,7 @@ const URL_BASE = 'https://rickandmortyapi.com/api';
 const API_KEY = 'b3607287c501.75998f2c466278552b4e';
 
 const email = "josemcentenoc@gmail.com";
-const password = "123456";
+const password = "Vinny09";
 
 function App() {
    const location = useLocation();

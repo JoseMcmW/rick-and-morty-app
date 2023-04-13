@@ -1,30 +1,22 @@
-import { useSelector } from "react-redux";
-import styles from "./Favorites.module.css";
-import { NavLink } from "react-router-dom";
-import favorites from "../../img/favorites.png"
+import Card from "../Card/Card";
+import { connect } from "react-redux";
+import styles from "./Favorites.module.css"
 
-const Favorites = () => {
-    const { myFavorites } = useSelector(state => state)
+const Favorites = ({ myFavorites }) => {
     return (
-            <div className={styles.favorites}>
-                <div>
-                    <img src={favorites} alt="favorites" className={styles.imgFavorites}/>
-                </div>
-
+            <div className={styles.container}>
                 {
-                    myFavorites.map((character) => {
-                        return (
-                            <div key={character.id} className={styles.container}>
-                                <button className={styles.closeButton}>X</button>
-                                <img src={character.image} alt={character.image} />
-
-                                <NavLink to={`/detail/${character.id}`} className={styles.name}>
-                                    <h2>{character.name}</h2>
-                                </NavLink>
-
-                                <h2 className={styles.h2}>Specie: {character.species}</h2>
-                                <h2 className={styles.h2}>Gender: {character.gender}</h2>
-                            </div>
+                    myFavorites?.map(fav => {
+                        return(
+                            <Card
+                                key={fav.id}
+                                id={fav.id}
+                                name={fav.name}
+                                species={fav.species}
+                                gender={fav.gender}
+                                image={fav.image}
+                                onClose={fav.onClose}
+                            />
                         )
                     })
                 }
@@ -32,4 +24,13 @@ const Favorites = () => {
     )
 }
 
-export default Favorites
+const mapStateToProps = (state) => {
+    return {
+        myFavorites: state.myFavorites
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    null
+)(Favorites)
