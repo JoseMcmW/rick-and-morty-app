@@ -1,55 +1,67 @@
 .container {
     width: fit-content;
     height:fit-content;
-    border: 5px solid #8DBF41;
+    border: 5px solid #F2A71B;
     border-radius: 15px;
     font-size: 0.8em;
     display: inline-block;
     position: relative;
     background-color: #F2DD72;
-    box-shadow: #8DBF41 1px 1px 3px 3px;
+    box-shadow: white 1px 1px 3px 3px;
     margin: 1em;
 }
 
 .container:hover{
-    box-shadow: #8DBF41 1px 1px 7px 7px;
+    box-shadow: white 1px 1px 8px 8px;
 }
 
 .container img {
     width: 250px;
     height: 250px;
-    border-bottom: solid #8DBF41 1px;
+    border-bottom: solid #F2A71B 1px;
+    border-radius: 5px 5px 0 0;
 }
 
-.container button {
+.closeButton {
     position: absolute;
-    background-color: red;
+    background-color: #BF1717;
+    margin-top: .8em;
+    right: .5em;
+}
+
+.closeButton:hover {
+    font-size: 1.2em;
+}
+
+.heartButton {
+    position: absolute;
     margin-top: .1em;
-    right: .1em;
+    background: transparent;
+    border: none;
+    font-size: 1.8em;
+}
+
+.heartButton:hover {
+    font-size: 2em;
 }
 
 .name {
     text-decoration: none;
-    color: #8DBF41;
-    transition: 0.5s;
+    color: #BF1717;
     position: absolute;
-    left: .5em;
+    left: .01em;
     bottom: 8em;
     right: 7em;
     padding-left: 1em;
     margin-top: 0;
-    background-color: #F28322;
-    opacity: 0.9;
-    text-shadow: black 2px 2px 5px;
-}
-
-.name:hover {
-    background-color: #F28322;
-    opacity: unset;
+    background: rgba(255, 255, 255, .3);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    backdrop-filter: blur(5px);
 }
 
 .h2 {
-    color: #111440;
+    color: #BF1717;
     margin: 0 auto;
     padding-left: .5em;
     padding-top: .3em;

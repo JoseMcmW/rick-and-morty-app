@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import style from "./detail.module.css"
 
 const Detail = () => {
     const url = 'https://rickandmortyapi.com/api';
@@ -22,14 +23,23 @@ const Detail = () => {
     }, [id]);
 
     return (
-    <div>
-        <h2>{character?.name}</h2>
-        <h2>{character?.status}</h2>
-        <h2>{character?.species}</h2>
-        <h2>{character?.gender}</h2>
-        <h2>{character?.origin?.name}</h2>
-        <img src={character?.image} alt={character?.name} />
-    </div>
+        <div>
+            <h1 className={style.title}>About Main Character</h1>
+            <div className={style.detail}>
+                <div className={style.containerDetail}>
+                    <div className={style.information}>
+                        <h2>Name: {character?.name}</h2>
+                        <h2>Status: {character?.status}</h2>
+                        <h2>Species: {character?.species}</h2>
+                        <h2>Gender: {character?.gender}</h2>
+                        <h2>Origin Name: {character?.origin?.name}</h2>
+                    </div>
+                    <div className={style.image}>
+                        <img src={character?.image} alt={character?.name} />
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 

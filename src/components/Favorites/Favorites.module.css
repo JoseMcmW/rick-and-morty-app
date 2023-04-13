@@ -12,3 +12,17 @@
     color: white;
     filter: drop-shadow(0 2px 2px #F2E85C);
 }
+
+.filters {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.filters h1 {
+    margin-right: 7em;
+}
+
+.filters select{
+    margin-right: 3em;
+}

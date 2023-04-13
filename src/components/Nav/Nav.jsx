@@ -1,10 +1,7 @@
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./Nav.module.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import navBrand from "../../img/title-nav.png"
-import about from "../../img/about.png"
-import home from "../../img/home.png"
-import logout from "../../img/LOGOUT.png"
 
 const Nav = ({onSearch, setAccess}) => {
 
@@ -15,15 +12,11 @@ const Nav = ({onSearch, setAccess}) => {
     return(
         <nav className={styles.container}>
             <img src={navBrand} alt="title-nav"></img>
-            <NavLink to="/about">
-                <img src={about} alt="about" className={styles.menu}/>
-            </NavLink>
-            <NavLink to="/home">
-                <img src={home} alt="home" className={styles.menu}/>
-            </NavLink>
-            <NavLink to="/home">
-                <img src={logout} alt="logout" className={styles.menu} onClick={handleLogOut}/>
-            </NavLink>
+            <NavLink to="/home" className={styles.menu}>Home</NavLink>
+            <NavLink to="/favorites" className={styles.menu}>Favorites</NavLink>
+            <NavLink to="/about" className={styles.menu}>About</NavLink>
+            <NavLink to="/home" className={styles.menu} onClick={handleLogOut}>Log Out</NavLink>
+
             <SearchBar onSearch={onSearch} />
         </nav>
     )

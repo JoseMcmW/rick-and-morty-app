@@ -1,0 +1,77 @@
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../img/form-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, .3);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.wellcome {
+    margin: 0;
+}
+
+.messagelogin {
+    margin: 0;
+    padding-top: 1.5em;
+}
+
+.inputsdiv {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.input {
+    height: 1.5em;
+    width: 15em;
+    font-family: 'Pompiere', cursive;
+}
+
+.rickandmorty {
+    margin-top: 0;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+}
+
+.error {
+    margin-top: 0.5em;
+    color: brown;
+    font-size: 0.9rem;
+    width: 60%;
+    text-align: justify;
+}
+
+.button {
+    width: 5em;
+    margin-top: 1.5em;
+    cursor: pointer;
+    font-family: 'Pompiere', cursive;
+    background-color: #BF1717;
+    color: white;
+    font-weight: bold;
+}
+
+.button:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}

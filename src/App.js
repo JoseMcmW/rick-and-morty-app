@@ -4,6 +4,7 @@ import Nav from '../src/components/Nav/Nav.jsx';
 import About from './components/About/About';
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/Form.jsx';
+import Favorites from "./components/Favorites/Favorites";
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios';
@@ -12,7 +13,7 @@ const URL_BASE = 'https://rickandmortyapi.com/api';
 const API_KEY = 'b3607287c501.75998f2c466278552b4e';
 
 const email = "josemcentenoc@gmail.com";
-const password = "123456";
+const password = "Vinny09";
 
 function App() {
    const location = useLocation();
@@ -59,6 +60,7 @@ function App() {
             <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='detail/:id' element={<Detail/>}/>
+            <Route path='/favorites' element={<Favorites/>}/>
          </Routes>
 
       </div>

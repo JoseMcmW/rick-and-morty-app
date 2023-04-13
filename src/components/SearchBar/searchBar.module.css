@@ -1,14 +1,15 @@
-.container input{
+.container input {
+    text-align: center;
     height: 2.5em;
-    border-radius: 15px;
     margin-right: 2em;
+    font-family: 'Pompiere', cursive;
 }
 
 .container button {
     height: 2rem;
-    border-radius: 10px;
-    background-color: #F28322;
-    color: #F2DD72;
+    background-color: #BF1717;
+    color: #F2E85C;
     cursor: pointer;
-    font-weight:bold;
+    font-family: 'Pompiere', cursive;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
 }
