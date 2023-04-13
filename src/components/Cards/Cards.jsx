@@ -5,7 +5,7 @@ export default function Cards({characters, onClose}) {
 
    return (
    <div className={styles.container}>
-
+            <h1 className={styles.title}>Added Characters</h1>
       {
          characters.map(p => {
             return(

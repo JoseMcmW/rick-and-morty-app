@@ -23,20 +23,23 @@ const Detail = () => {
     }, [id]);
 
     return (
-    <div className={style.detail}>
-        <div className={style.containerDetail}>
-            <div className={style.information}>
-                <h2>Name: {character?.name}</h2>
-                <h2>Status: {character?.status}</h2>
-                <h2>Species: {character?.species}</h2>
-                <h2>Gender: {character?.gender}</h2>
-                <h2>Name: {character?.origin?.name}</h2>
-            </div>
-            <div className={style.image}>
-                <img src={character?.image} alt={character?.name} />
+        <div>
+            <h1 className={style.title}>About Main Character</h1>
+            <div className={style.detail}>
+                <div className={style.containerDetail}>
+                    <div className={style.information}>
+                        <h2>Name: {character?.name}</h2>
+                        <h2>Status: {character?.status}</h2>
+                        <h2>Species: {character?.species}</h2>
+                        <h2>Gender: {character?.gender}</h2>
+                        <h2>Origin Name: {character?.origin?.name}</h2>
+                    </div>
+                    <div className={style.image}>
+                        <img src={character?.image} alt={character?.name} />
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     );
 };
 

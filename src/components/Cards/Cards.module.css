@@ -2,5 +2,13 @@
     flex-wrap: nowrap;
     justify-content: center;
     text-align: center;
-    padding: 1em;
+}
+
+.title{
+    margin-top: 1em;
+    margin-bottom: .5em;
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    filter: drop-shadow(0 2px 2px #F2E85C);
 }

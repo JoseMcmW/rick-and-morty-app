@@ -7,13 +7,13 @@
     filter: drop-shadow(0 2px 2px #F2E85C);
 }
 
-.detail {
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.containerDetail {
+.containerAbout {
     height: 400px;
     width: 700px;
     background-color: white;
@@ -46,6 +46,6 @@
 }
 
 .image img {
-    width: fit-content;
+    width: 230px;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
 }

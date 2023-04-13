@@ -1,6 +1,6 @@
 .container {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,7 +8,7 @@
     align-items: center;
     background-image: url(../../img/form-background.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .form {
@@ -51,7 +51,7 @@
     margin-top: 0;
     font-family: 'Fredericka the Great', cursive;
     color: white;
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
 }
 
 .error {
@@ -67,7 +67,7 @@
     margin-top: 1.5em;
     cursor: pointer;
     font-family: 'Pompiere', cursive;
-    background-color: #F28322;
+    background-color: #BF1717;
     color: white;
     font-weight: bold;
 }
