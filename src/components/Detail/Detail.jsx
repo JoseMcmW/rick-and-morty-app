@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 import style from "./detail.module.css"
 
 const Detail = () => {
-    const url = 'https://rickandmortyapi.com/api';
-    const key = 'b3607287c501.75998f2c466278552b4e';
+/*     const url = 'https://rickandmortyapi.com/api';
+    const key = 'b3607287c501.75998f2c466278552b4e'; */
     const { id } = useParams();
     const [character, setCharacter] = useState({});
 
     useEffect(() => {
-        axios(`${url}/character/${id}?key=${key}`).then(
+        axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
         ({ data }) => {
         if (data.name) {
             setCharacter(data);

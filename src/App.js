@@ -9,8 +9,8 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-const URL_BASE = 'https://rickandmortyapi.com/api';
-const API_KEY = 'b3607287c501.75998f2c466278552b4e';
+/* const URL_BASE = 'https://rickandmortyapi.com/api';
+const API_KEY = 'b3607287c501.75998f2c466278552b4e'; */
 
 const email = "josemcentenoc@gmail.com";
 const password = "Vinny09";
@@ -31,10 +31,10 @@ function App() {
 
    useEffect(() => {
       !access && navigate("/") //!access es negar access lo que es igual a true
-   }, [access]); //Queda pendiente de access para dar acceso a home
+   }, [navigate, access]); //Queda pendiente de access para dar acceso a home
 
    function onSearch(id) {
-      axios(`${URL_BASE}/character/${id}?key=${API_KEY}`)
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then(({ data }) => {
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
