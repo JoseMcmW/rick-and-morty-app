@@ -11,7 +11,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 myFavorites: [...state.allCharactersFav, action.payload],
-                allCharactersFav: [...state.allCharactersFav, action.payload]
+                allCharactersFav: [...state.allCharactersFav, action.payload] //Copia del estado myFavorites
             }
 
         case REMOVE_FAV:
