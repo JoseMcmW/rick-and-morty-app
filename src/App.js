@@ -12,9 +12,6 @@ import axios from 'axios';
 /* const URL_BASE = 'https://rickandmortyapi.com/api';
 const API_KEY = 'b3607287c501.75998f2c466278552b4e'; */
 
-const email = "josemcentenoc@gmail.com";
-const password = "Vinny09";
-
 function App() {
    const location = useLocation();
    const navigate = useNavigate();
@@ -23,11 +20,15 @@ function App() {
    const [access, setAccess] = useState(false);
 
    const login = (userData) => {
-      if(userData.email === email && userData.password === password) {
-         setAccess(true);
-         navigate("/home");
-      }
-   };
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login';
+      axios(URL + `?email=${email}&password=${password}`)
+      .then(({ data }) => {
+         const { access } = data;
+         setAccess(access);
+         access && navigate('/home');
+      });
+   }
 
    useEffect(() => {
       !access && navigate("/") //!access es negar access lo que es igual a true
@@ -45,7 +46,7 @@ function App() {
    };
 
    const onClose = (id) => {
-      const charactersFiltered = characters.filter(characters => characters.id !== Number(id))
+      const charactersFiltered = characters.filter(characters => characters.id !== id)
       setCharacters(charactersFiltered)
    };
 
